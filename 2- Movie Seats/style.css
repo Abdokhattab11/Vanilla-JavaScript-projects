@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
+:root {
+  --background: #242333;
+  --seat-na: #444451;
+  --seat-selected: #6feaf6;
+  --seat-occupied: #fff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  min-height: 100vh;
+  font-family: "Lato", sans-serif;
+  background-color: var(--background);
+}
+.movie__tickets {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.movie__pick {
+  margin-bottom: 30px;
+}
+.movie__pick label {
+  margin-right: 15px;
+  font-size: 18px;
+}
+.movie__pick select {
+  font-size: 15px;
+  padding: 10px 12px;
+  border-radius: 5px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.movie__chairs {
+  padding: 10px 20px;
+  background-color: #1d1c29;
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+.container {
+  perspective: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.screen {
+  width: 100%;
+  height: 70px;
+  background-color: #fff;
+  margin-bottom: 20px;
+  transform: rotateX(-45deg);
+  box-shadow: 0 2px 10px #fff;
+}
+.chair {
+  background-color: var(--seat-na);
+  width: 16px;
+  height: 14px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+.movie__chairs-element {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+.movie__chairs-element small {
+  color: #777;
+}
+.chair.selected {
+  background-color: var(--seat-selected);
+}
+.chair.occupied {
+  background-color: var(--seat-occupied);
+}
+.chairs {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.row {
+  display: flex;
+  gap: 6px;
+}
+.row .chair:not(.occupied):hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+.row .chair:nth-child(2) {
+  margin-right: 20px;
+}
+.row .chair:nth-last-child(2) {
+  margin-left: 20px;
+}
+.selected-seats,
+.total-price {
+  align-self: flex-start;
+  font-size: 18px;
+}
+.selected-seats span,
+.total-price span {
+  color: var(--seat-selected);
+}
+.selected-seats {
+  margin-bottom: 10px;
+}
