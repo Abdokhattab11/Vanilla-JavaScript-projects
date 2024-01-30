@@ -12,7 +12,29 @@
       crossorigin="anonymous"></script>
   </head>
   <body>
-    <i class="fa-solid fa-pause"></i>
-    <i class="fa-solid fa-stop"></i>
+    <h1>Custom Video Player</h1>
+    <video
+      src="assets/videos/gone.mp4"
+      poster="assets/img/pT58xKE7c.png"
+      id="video"
+      class="video"></video>
+    <div class="controls">
+      <!-- -->
+      <button class="btn play">
+        <i class="fa-solid fa-play fa-2x"></i>
+      </button>
+      <button class="btn stop">
+        <i class="fa-solid fa-stop fa-2x"></i>
+      </button>
+      <input
+        type="range"
+        id="progress"
+        class="progress"
+        min="0"
+        max="100"
+        step="0.4"
+        value="0" />
+      <span class="timestamp" id="timestamp">00:00</span>
+    </div>
   </body>
 </html>
