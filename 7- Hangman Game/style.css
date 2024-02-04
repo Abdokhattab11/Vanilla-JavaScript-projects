@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #34495e;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+h1 {
+  margin: 20px 0;
+}
+.game-container {
+  position: relative;
+  width: 600px;
+  margin-top: 30px;
+}
+.wrong {
+  margin: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.wrong p {
+  font-size: 20px;
+  font-weight: bold;
+}
+.wrong span {
+  font-size: 18px;
+}
+.word {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.word p {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  width: 25px;
+  height: 50px;
+  font-size: 30px;
+  padding-bottom: 5px;
+  border-bottom: 3px solid #2980b9;
+}
+.figure-container {
+  fill: transparent; /* Fill is used for closed shaped like circles*/
+  stroke: #fff; /* For outline of the shape*/
+  stroke-width: 4px; /* Width of the stroke */
+  stroke-linecap: round; /* Make the end of the stroke round */
+  margin-bottom: 30px;
+}
+.popup-cnt {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: all 0.5s;
+}
+.popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  background-color: #2980b9;
+  width: 300px;
+  padding: 20px;
+  border-radius: 5px;
+}
+.popup p {
+  font-size: 24px;
+  font-weight: bold;
+}
+.popup button {
+  color: #2980b9;
+  font-size: 18px;
+  border: none;
+  background-color: #fff;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+.notification-cnt {
+  position: absolute;
+  padding: 20px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+  bottom: 0;
+  transition: ease-in-out 0.5s;
+  transform: translateY(100%);
+}
+.show.notification-cnt {
+  transform: translate(0);
+}
+#play-again-btn {
+  border-radius: 5px;
+}
