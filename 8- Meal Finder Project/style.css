@@ -92,6 +92,7 @@ button i {
   opacity: 1;
 }
 .meal-title {
+  width: 100%;
   cursor: pointer;
   user-select: none;
   opacity: 0;
@@ -101,9 +102,10 @@ button i {
   left: 50%;
   transform: translate(-50%, -50%);
   font-weight: bold;
-  font-size: 20px;
+  font-size: 18px;
   transition: all 0.5s;
   overflow: hidden;
+  text-align: center;
 }
 .meal-item img {
   display: block;
@@ -181,4 +183,7 @@ button i {
 }
 .hidden {
   display: none;
+}
+.specific-meal-info {
+  margin-bottom: 60px;
 }
