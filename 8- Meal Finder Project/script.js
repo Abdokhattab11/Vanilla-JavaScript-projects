@@ -48,7 +48,10 @@ async function getMealsByName(name) {
       mealDom.className = "meal-item";
       mealDom.innerHTML = meal.renderGallary();
       mealsList.append(mealDom);
-      mealDom.addEventListener("click", displayAllMealInfo.bind(null, meal));
+      mealDom.addEventListener("click", () => {
+        displayAllMealInfo(meal);
+        mealAllInfo.scrollIntoView({ behavior: "smooth" });
+      });
     }
   } catch (e) {
     mealsTitle.innerText = `Can't Find Meals With Name ${name}`;
