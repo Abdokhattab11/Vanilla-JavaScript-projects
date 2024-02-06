@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense tracker</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/cbc5c8dbdd.js"
+      crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Expense Tracker</h1>
+      <div class="balance">
+        <div class="balance-header">
+          <p>Your balance</p>
+          <p class="price">$0.00</p>
+        </div>
+        <div class="balance-info">
+          <div class="income">
+            <p>income</p>
+            <p class="income-cash">$0.00</p>
+          </div>
+          <div class="expense">
+            <p>expense</p>
+            <p class="expense-cash">$0.00</p>
+          </div>
+        </div>
+      </div>
+      <div class="history">
+        <h3 class="header-of-div">History</h3>
+        <ul class="hisotry-list"></ul>
+      </div>
+      <div class="transaction">
+        <h3 class="header-of-div">Add new transaction</h3>
+        <form>
+          <div class="input-cnt">
+            <label for="text">Text</label>
+            <input type="text" placeholder="Enter Text..." id="text" />
+            <span>Enter Non Empty Text</span>
+          </div>
+          <div class="input-cnt">
+            <label for="amount">
+              Amount <br />(negative - expense, positive - income)
+            </label>
+            <input type="number" placeholder="Enter Amount..." id="amount" />
+            <span>Enter Non Empty Amount</span>
+          </div>
+          <button id="add-transaction-btn" class="add-transaction-btn">
+            Add Transaction
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
