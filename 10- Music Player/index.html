@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player</title>
+    <script
+      src="https://kit.fontawesome.com/cbc5c8dbdd.js"
+      crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <h1>Music Player</h1>
+    <div class="music-container">
+      <div class="music-info">
+        <h2>Name of Song</h2>
+        <div class="progress-conatiner" id="progress-conatiner">
+          <div class="progress" id="progress"></div>
+        </div>
+      </div>
+      <audio
+        src="assets/audio/Cairokee - Ya Abyad Ya Eswed.mp3"
+        id="audio-el"></audio>
+      <div class="img-cnt">
+        <img src="assets/imgs/ukulele.jpg" alt="Hey" />
+      </div>
+      <div class="action-btn">
+        <button class="prev btn" id="prev">
+          <i class="fa-solid fa-backward"></i>
+        </button>
+        <button class="play btn" id="play">
+          <i class="fa-solid fa-play"></i>
+        </button>
+        <button class="next btn" id="next">
+          <i class="fa-solid fa-forward"></i>
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
