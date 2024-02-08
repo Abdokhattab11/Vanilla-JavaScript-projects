@@ -1,5 +1,9 @@
 const postList = document.querySelector(".post-cnt");
 const loader = document.querySelector(".loader");
+const inputEl = document.getElementById("search-input");
+
+const allPostsDom = [];
+/* Prototype {domObj, text} */
 
 let limit = 3;
 let page = 1;
@@ -13,7 +17,18 @@ function createPost(obj) {
     <h3>${obj.title}</h3>
     <p>${obj.body}</p>
   `;
-  return post;
+  return { domObj: post, text: `${obj.title} ${obj.body}` };
+}
+
+function handleVisiableItems() {
+  const value = inputEl.value;
+  allPostsDom.forEach((item) => {
+    if (item.text.includes(value)) {
+      item.domObj.classList.remove("hidden");
+    } else {
+      item.domObj.classList.add("hidden");
+    }
+  });
 }
 
 async function loadNewPostsHandle() {
@@ -32,10 +47,16 @@ async function getNewPosts() {
 
 async function addNewPosts() {
   const data = await getNewPosts();
-  for (const i of data) postList.append(createPost(i));
+  for (const i of data) {
+    const postItem = createPost(i);
+    postList.append(postItem.domObj);
+    allPostsDom.push(postItem);
+  }
 }
 // Inintally show 3 posts
 addNewPosts();
+
+inputEl.addEventListener("input", handleVisiableItems);
 
 window.addEventListener("scroll", async () => {
   //document.documentElement -> This is root element of the document -> <html>
@@ -57,6 +78,7 @@ window.addEventListener("scroll", async () => {
     isLoading = true;
     // Wait to end then back it to false
     await loadNewPostsHandle();
+    handleVisiableItems();
     isLoading = false;
   }
 });
