@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Speed Test</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="difficulty">
+      <h1>Type Speed Test</h1>
+      <form>
+        <label>Difficulty</label>
+        <select id="user-level">
+          <option>Easy</option>
+          <option>Meduim</option>
+          <option>Hard</option>
+        </select>
+      </form>
+    </header>
+    <main class="test">
+      <div class="test-header">
+        <h2>Type The sentence below</h2>
+        <div class="timer">
+          <p>Timer :</p>
+          <p class="timer-seconds"><span></span>s</p>
+        </div>
+      </div>
+      <div class="sentence"></div>
+      <form class="user-input">
+        <div class="wrapper">
+          <textarea
+            spellcheck="false"
+            readonly
+            rows="1"
+            type="text"
+            id="user-input"></textarea>
+        </div>
+      </form>
+      <div class="start">
+        <button class="btn" id="start-btn">Start Now</button>
+      </div>
+    </main>
+    <div class="result-cnt hidden">
+      <div class="result">
+        <h2>Your Score</h2>
+        <p>Speed : <span class="speed">36</span> Letter per second</p>
+        <p>Accuracy : <span class="acc">80%</span></p>
+        <button class="play-again-btn">Play Again</button>
+      </div>
+    </div>
+  </body>
+</html>

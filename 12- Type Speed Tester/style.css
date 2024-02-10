@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  position: relative;
+  background-color: #2c3e50;
+  color: #fff;
+  font-family: sans-serif;
+}
+header {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.difficulty label {
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+.difficulty select {
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 3px;
+}
+.test {
+  margin: 60px auto;
+  width: 900px;
+  background-color: #34495e;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
+}
+.test > * {
+  padding: 30px;
+}
+.test-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #fff;
+}
+.timer {
+  font-size: 24px;
+  display: flex;
+  gap: 15px;
+}
+.sentence {
+  justify-content: start;
+  font-size: 32px;
+  font-weight: bold;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+}
+.sentence p {
+  display: flex;
+}
+.sentence p span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 26px;
+}
+.sentence .current {
+  color: rgb(221, 255, 3);
+  border-bottom: 1px solid currentColor;
+}
+.sentence .correct {
+  color: rgb(45, 197, 45);
+}
+.sentence .wrong {
+  color: rgb(250, 45, 45);
+}
+.user-input {
+  width: 100%;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border: 1px solid #aaa;
+  height: 100%;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+}
+.user-input textarea {
+  resize: none;
+  font-size: 32px;
+  background-color: #fff;
+  border: none;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+}
+.user-input textarea:focus {
+  outline: none;
+}
+.start {
+  display: flex;
+  justify-content: center;
+}
+.btn {
+  border: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #fff;
+  border-radius: 5px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #ececec;
+}
+.result-cnt {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.result {
+  width: 400px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  gap: 20px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+  background-color: #fff;
+  color: #2c3e50;
+}
+.result p {
+  font-size: 20px;
+}
+.play-again-btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 20px;
+  background-color: #2c3e50;
+  color: #fff;
+  cursor: pointer;
+}
+.hidden {
+  display: none;
+}
