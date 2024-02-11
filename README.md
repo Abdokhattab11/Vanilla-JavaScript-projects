@@ -1,1 +1,1 @@
-### 20 projects using Vanilla JavaScript
+### Projects using Vanilla JavaScript
